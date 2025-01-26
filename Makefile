@@ -17,7 +17,7 @@ VENV_NAME := $(PROJECT_NAME)-$(PYTHON_VERSION)
 .setup:
 	pip install -r requirements.txt
 
-create-venv: .install-python .create-venv .pip
+create-venv: .install-python .create-venv .pip .setup
 
 test:
 	py.test -v --cov-report=term-missing --cov-report=html --cov
